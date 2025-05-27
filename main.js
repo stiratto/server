@@ -9,6 +9,7 @@ app.use(express.json())
 
 app.post('/receive-code', (req, res) => {
   console.log("Received code")
+  res.status(200).send("Buena esa crack")
 })
 
 app.get('/greeting', (req, res) => {
