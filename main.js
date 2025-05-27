@@ -9,6 +9,9 @@ app.use(express.json())
 
 app.post('/receive-code', (req, res) => {
   console.log("Received code")
+  const body = req.body.body
+  console.log(`body: ${body}`)
+
   res.status(200).send("Buena esa crack")
 })
 
