@@ -11,6 +11,9 @@ app.post('/receive-code', (req, res) => {
   console.log("Received code")
   const body = req.body.body
   console.log(`body: ${body}`)
+  const code = body.search("\d\d\d\d")
+  console.log(`code: ${code}`)
+
 
   res.status(200).send("Buena esa crack")
 })
