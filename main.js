@@ -10,7 +10,8 @@ app.use(express.json())
 app.post('/receive-code', (req, res) => {
   console.log("Received code")
   const body = req.body.body
-  console.log(`body: ${body}`)
+
+  console.log("[EXTRACTING CODE...]")
   const code = body.match(/\b\d{4,6}\b/)
   console.log(`code: ${code}`)
 
